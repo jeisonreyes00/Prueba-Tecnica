@@ -1,69 +1,49 @@
-# React + TypeScript + Vite
+# Todo List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación simple y eficiente para gestionar tus tareas diarias, construida con React y TypeScript.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Gestión de Tareas: Añade, edita, elimina y marca tareas como completadas.
+- Filtrado: Visualiza todas las tareas o solo las completadas.
+- Contador de Tareas: Lleva un seguimiento de cuántas tareas has completado.
+- Diseño Responsive: Interfaz adaptable a móviles, tabletas y escritorios.
+- Estado Centralizado: Gestión global del estado usando React Context API.
+- Pruebas Unitarias: Con Jest y React Testing Library para asegurar funcionalidad.
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React – Biblioteca para construir interfaces de usuario.
+- TypeScript – Tipado estático para un desarrollo más robusto.
+- Tailwind CSS – Estilizado rápido y moderno con enfoque utility-first.
+- Vite – Herramienta de build rápida para desarrollo web moderno.
+- Jest – Framework de testing para JavaScript.
+- React Testing Library – Utilidades para pruebas centradas en la experiencia del usuario.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Instalación
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Sigue estos pasos para correr el proyecto localmente:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clona el repositorio:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   ```bash
+   git clone https://github.com/jeisonreyes00/Prueba-Tecnica.git
+   cd Prueba-Tecnica
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. Ejecución de la Aplicación
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    npm run dev
+
+3. Ejecución de las Pruebas
+
+    npm test
+
+Diseño Responsive
+El diseño se ha implementado con un enfoque mobile-first, asegurando una experiencia óptima en cualquier dispositivo. Se utilizaron las siguientes herramientas de Tailwind CSS:
+
+Flexbox y Grid: Para construir layouts adaptables y consistentes.
+
+Breakpoints: (sm, md, lg, xl, 2xl) para estilos condicionales según el tamaño de pantalla.
+
+Unidades Relativas: Como rem, vw y vh para un diseño escalable.
+
